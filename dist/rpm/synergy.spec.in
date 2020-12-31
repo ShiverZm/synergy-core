@@ -1,4 +1,4 @@
-%define _rpmfilename %%{NAME}_%%{VERSION}%%{RELEASE}.rpm
+%define _rpmfilename %%{NAME}_%%{VERSION}-%%{RELEASE}.rpm
 
 Name: synergy-enterprise
 Version: @SYNERGY_VERSION@

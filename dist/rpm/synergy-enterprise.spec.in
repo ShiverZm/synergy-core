@@ -1,4 +1,4 @@
-%define _rpmfilename %%{NAME}_%%{Version}%%{Release}.rpm
+%define _rpmfilename %%{NAME}_%%{Version}-%%{Release}.rpm
 Name: synergy
 Version: @SYNERGY_VERSION@
 Summary: Keyboard and mouse sharing solution
