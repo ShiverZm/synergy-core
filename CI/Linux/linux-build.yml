@@ -112,8 +112,8 @@ steps:
       make install/strip
       cd rpm
       rpmbuild -bb --define "_topdir $(pwd)" --buildroot $(pwd)/BUILDROOT synergy.spec
-      rpmlint --verbose RPMS/x86_64/*.rpm
-      cd RPMS/x86_64
+      rpmlint --verbose RPMS/*.rpm
+      cd RPMS
       filename=$(ls *.rpm)
       filename_new="synergy_${SYNERGY_RPM_VERSION}_$(name)${filename##*${SYNERGY_REVISION}}"
       md5sum $filename_new >> ${filename_new}.checksum.txt
@@ -131,8 +131,8 @@ steps:
       make install/strip
       cd rpm
       rpmbuild -bb --define "_topdir $(pwd)" --buildroot $(pwd)/BUILDROOT synergy-enterprise.spec
-      rpmlint --verbose RPMS/x86_64/*.rpm
-      cd RPMS/x86_64
+      rpmlint --verbose RPMS/*.rpm
+      cd RPMS
       filename=$(ls *.rpm)
       filename_new="synergy-enterprise_${SYNERGY_RPM_VERSION}_$(name)${filename##*${SYNERGY_REVISION}}"
       md5sum $filename_new >> ${filename_new}.checksum.txt
